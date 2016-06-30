@@ -17,11 +17,11 @@ class CreateAdminUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('nick_name');
-            $table->string('image');
-            $table->tinyInteger('sex');
-            $table->dateTime('birthday');
-            $table->string('address');
+            $table->string('nick_name')->nullable();
+            $table->string('image')->nullable();
+            $table->tinyInteger('sex')->nullable();
+            $table->dateTime('birthday')->nullable();
+            $table->string('address')->nullable();
             $table->tinyInteger('roles');
             $table->tinyInteger('status');
             $table->rememberToken();

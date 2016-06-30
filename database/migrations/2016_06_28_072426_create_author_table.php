@@ -15,10 +15,10 @@ class CreateAuthorTable extends Migration
         Schema::create('author', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('name');
-            $table->string('nick_name');
-            $table->string('address');
-            $table->string('country');
-            $table->dateTime('birthday');
+            $table->string('nick_name')->nullable();
+            $table->string('address')->nullable();
+            $table->string('country')->nullable();
+            $table->dateTime('birthday')->nullable();
             $table->timestamps();
         });
     }
